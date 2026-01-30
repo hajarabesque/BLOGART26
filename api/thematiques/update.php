@@ -6,8 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $libThem = $_POST['libThem'];
 
 
-    sql_update("THEMATIQUE", "libThem = '$libThem'", "numThem = $numThem");
 
-    header('Location: ../../views/backend/thematiques/list.php');
-    exit();
+sql_update("THEMATIQUE", "libThem = '$libThem'", "numThem = $numThem");
+
+header('Location: ../../views/backend/thematiques/list.php');
+exit();
 }
